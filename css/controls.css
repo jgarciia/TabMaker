@@ -1,0 +1,29 @@
+#controls {
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    color: var(--secondary);
+}
+
+#insertName {
+    border: 0.15em solid var(--secondary);
+    height: 37px;
+    font-size: 0.8em;
+    background: var(--primary);
+    outline: none;
+    border-radius: 0.45em;
+    color: var(--secondary);
+    display: inline-block;
+}
+
+#songName {
+    display: flex;
+    font-size: 2.3em;
+    margin-bottom: 0;
+}
+
+#songName a {
+    margin-left: 0.5em;
+    padding: 0 0.5em 0 0.8em;
+    font-size: 0.6em;
+}

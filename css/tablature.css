@@ -1,0 +1,83 @@
+#tablature {
+    width: 90%;
+    height: 480px;
+    margin: 0em auto;
+    font-size: 1.5em;
+    color:gray;
+    overflow: auto;
+}
+
+#tablature::-webkit-scrollbar {
+    display: none;
+  }
+
+.tab {
+    color: white;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    position: absolute;
+    letter-spacing: 1px;
+    font-size: 1.5em;
+    margin: 4px 0 0 0;
+}
+
+#tablature .notes li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 3px;
+    width: 23px;
+    text-align: center;
+}
+
+.numbers {
+    margin:  1em 0 0 1em;
+    color: white;
+    font-size: 0.9em;
+    padding: 0;
+}
+
+.notes {
+    width: 1690px;
+    position: absolute;
+    display: block;
+    line-height: 141px;
+    margin: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#line0{
+    top: -61px;
+}
+
+#line1{
+    top: -39px;
+}
+
+#line2{
+    top: -17px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#line3{
+    top: 5px;
+}
+
+#line4{
+    top: 27px;
+}
+
+#line5{
+    top: 49px;
+}
+
+.container, .numbers {
+    position: relative;
+}
+
+.container ul {
+    margin: 0.5em 0 0 0;
+    padding: 0;
+    font-size: 0.8em;
+}
