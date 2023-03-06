@@ -1,0 +1,125 @@
+#guitar {
+    margin: 0 7%;
+    position: relative;
+    display: none;
+}
+
+#guitar ul {
+    list-style: none;
+}
+
+#guitar #head, #guitar #neck, #tunnign_keys, #nut, #strings {
+    position: absolute;
+}
+
+#guitar #head {
+    background: linear-gradient(to right, #7C583A 10%, aqua 90%);
+    height: 200px;
+    width: 300px;
+    top: 35px;
+    border-radius: 70px 30% 30% 70px;
+    z-index: 0;
+}
+
+.hole {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    margin: 33px auto 0 auto;
+    background: #222;
+    border-radius: 50px;
+}
+
+.hole p, #tunnign_keys li {
+    position: relative;
+    margin: 0 0 0 33px;
+    background: linear-gradient(to right, gray, whitesmoke 50%, gray 90%);
+    width: 25px;
+    height: 50px;
+    display: inline-block;
+}
+
+#tunnign_keys {
+    height: 190px;
+    width: 230px;
+    top: -46px;
+    left: 26px;
+}
+
+#tunnign_keys li {
+    border-radius: 50px;
+    margin: 0 0 195px 7px;
+    width: 50px;
+    height: 30px;
+    display: inline-block;
+}
+
+#tunnign_keys li:nth-child(n+4) {
+    margin-bottom: 1px;
+}
+
+#guitar #neck {
+    width: 1370px;
+    height: 170px;
+    left: 298px;
+    top: 50px;
+    border-radius: 15% 0 0 15%;
+    background: black;
+    z-index: 1;
+}
+
+#nut {
+    background: white;
+    width: 20px;
+    height: 150px;
+    z-index: 2;
+    top: 11px;
+    box-shadow: -10px 5px 17px black;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 1.3em;
+    border-radius: 50px;
+}
+
+#fret_lines {
+    width: 101.72%;
+    height: 100%;
+    margin: 0 0 0 -23px;
+    align-items:start;
+}
+
+#fret_lines li {
+    width: 8.25%;
+    height: 100%;
+    display: inline-block;
+    border-right: 2px solid goldenrod;
+}
+
+#fret_lines li:first-child {
+    height: 97%;
+    margin-bottom: 2px;
+}
+
+#strings {
+    width: 101.2%;
+    height: 100%;
+    z-index: 3;
+    top: -15px;
+    left: -20px;
+}
+
+#strings li {
+    height: 10px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+#strings li:nth-child(-n+4) {
+    background-color: rgba(255, 255, 255, 0.258);
+}
+
+#strings li:nth-child(n+4) {
+    background: linear-gradient(gray, white 20%, gray 90%);
+}

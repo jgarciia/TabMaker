@@ -1,15 +1,29 @@
-#tablature {
-    width: 90%;
-    height: 480px;
-    margin: 0em auto;
-    font-size: 1.5em;
-    color:gray;
-    overflow: auto;
-}
-
 #tablature::-webkit-scrollbar {
     display: none;
   }
+
+#tablature {
+    width: 90%;
+    margin: 0em auto;
+    padding: 0 0;
+    font-size: 1.5em;
+    color:gray;
+    overflow: auto;
+    user-select: none;
+    height: 510px;
+}
+
+.numbers{
+    position: absolute;
+    margin: -4px;
+    color: white;
+    z-index: 10;
+}
+
+.container {
+    position: relative;
+    margin-bottom: 10px;
+}
 
 .tab {
     color: white;
@@ -21,63 +35,40 @@
     margin: 4px 0 0 0;
 }
 
-#tablature .notes li {
+.lines {
+    position: relative;
+    z-index: -1;
+}
+
+.lines ul {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8em;
+}
+
+.numbers ul {
+    font-size: 1em;
+    margin: 0;
+    height: 22px;
+}
+
+.numbers ul li {
+    text-align: center;
     list-style: none;
     display: inline-block;
-    margin: 0 3px;
-    width: 23px;
-    text-align: center;
-}
-
-.numbers {
-    margin:  1em 0 0 1em;
-    color: white;
-    font-size: 0.9em;
-    padding: 0;
-}
-
-.notes {
-    width: 1690px;
-    position: absolute;
-    display: block;
-    line-height: 141px;
-    margin: 0;
-    overflow: hidden;
+    width: 30px;
     z-index: 1;
 }
 
-#line0{
-    top: -61px;
+.selected {
+    background: rgb(49, 49, 50, 0.668);
+    background: rgba(120, 119, 119, 0.636);
 }
 
-#line1{
-    top: -39px;
+.pointA {
+    background: rgba(12, 188, 68, 0.668)
 }
 
-#line2{
-    top: -17px;
-    z-index: 100;
-    cursor: pointer;
-}
-
-#line3{
-    top: 5px;
-}
-
-#line4{
-    top: 27px;
-}
-
-#line5{
-    top: 49px;
-}
-
-.container, .numbers {
-    position: relative;
-}
-
-.container ul {
-    margin: 0.5em 0 0 0;
-    padding: 0;
-    font-size: 0.8em;
+.pointB {
+    background: rgba(136, 29, 27, 0.548)
 }

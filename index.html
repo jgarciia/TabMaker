@@ -9,20 +9,22 @@
     <link rel="stylesheet" href="css/controls.css">
     <link rel="stylesheet" href="css/tablature.css">
     <link rel="stylesheet" href="css/piano.css">
+    <link rel="stylesheet" href="css/guitar.css">
 </head>
 <body>
-    <div id="controls">
-        <h1 id="songName">Song's name</h1>
-    </div>
-    <div id="tablature">
-        <div class="numbers">
-            <ul id="line0" class="notes"></ul>
-            <ul id="line1" class="notes"></ul>
-            <ul id="line2" class="notes"></ul>
-            <ul id="line3" class="notes"></ul>
-            <ul id="line4" class="notes"></ul>
-            <ul id="line5" class="notes"></ul>
+    <header id="controls">
+        <h1 title="Click to change song's name" id="songName">Song's name</h1>
+        <div>
+            <button title="Practice" id="practice" onclick="practice()"><img class="headerButtons" src="images/play.png"></button>
+            <button title="instrument" onclick="changeInstrument()"><img id="instrument" class="headerButtons" src="images/guitar.png"></button>
+            <label title="Load" for="inputfile" onclick=""><img class="headerButtons" src="images/upload.png"></label>
+            <input type="file" id="inputfile" onchange="openFile(this)">
+            <button title="Download" id="downloadSong" onclick="downloadSong()"><img class="headerButtons" src="images/download.png"></button>
+            <button title="clean file" id="cleanButton" onclick="cleanTab()"><img class="headerButtons" src="images/close.png"></button>
+            <a id="downloadLink"></a>
         </div>
+    </header>
+    <div id="tablature">
     </div>
     <div id="popup">
         <div id="positions"></div>
@@ -32,7 +34,7 @@
             <button type="button" class="blue" onclick="draw('|')">add fret</button>
         </div>
     </div>
-    <div>
+    <div id="instrument">
         <ul id="set">
             <li  id="e2" class="white e"><span class="S6-F0">E</span></li>
             <li  id="f2" class="white f"><span class="S6-F1">F</span></li>
@@ -72,7 +74,31 @@
             <li  id="es5" class="black es"><span class="S1-F11"></span></li>
             <li  id="e5" class="white e"><span class="S1-F12">E</span></li>
             <li  id="f5" class="white f"><span class="S1-F3">F</span></li>
-          </ul>
+        </ul>
+        <div id="guitar">
+            <div id="head">
+                <div class="hole"><p></p><p></p><p></p></div>
+                <div class="hole"><p></p><p></p><p></p></div>
+                <ul id="tunnign_keys">
+                    <li></li><li></li><li></li>
+                    <li></li><li></li><li></li>
+                </ul>
+            </div>
+            <div id="neck">
+                <div id="nut">eBGDAE</div>
+                <ul id="fret_lines">
+                    <li></li><li></li><li></li>
+                    <li></li><li></li><li></li>
+                    <li></li><li></li><li></li>
+                    <li></li><li></li><li></li>
+                </ul>
+                <ul id="strings">
+                    <li><span></span></li><li><span></span></li>
+                    <li><span></span></li><li><span></span></li>
+                    <li><span></span></li><li><span></span></li>
+                </ul>
+            </div>
+        </div>
     </div>
     <script src="js/index.js"></script>
 </body>

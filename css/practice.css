@@ -1,0 +1,72 @@
+:root {
+    --primary: #222;
+    --secondary: hsl(186 100% 69%);
+}
+
+body {
+    height: 90vh;
+    background: var(--primary);
+    min-width: 1910px;
+}
+
+.box {
+    display: flex;
+    width: 80%;
+    margin: 0 auto 15px auto;
+    justify-content: space-between;
+}
+
+.buttons {
+    display: flex;
+}
+
+.buttons button {
+    padding: 0;
+    background: rgba(255, 0, 0, 0);
+    border: 0;
+}
+
+#songName {
+    color: var(--secondary);
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.icons {
+    border: solid 1px var(--secondary);
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 0.5em;
+    margin: 0px 5px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+
+.icons:hover, #changeSpeed:hover {
+    background: rgba(1, 114, 137, 0.586);
+}
+
+#tablature {
+    height: 800px;
+}
+
+#insertSpeed {
+    border: 0.15em solid var(--secondary);
+    height: 57px;
+    font-size: 0.8em;
+    background: var(--primary);
+    outline: none;
+    border-radius: 0.45em;
+    color: var(--secondary);
+    display: inline-block;
+}
+
+#speedChange {
+    font-size: 2.3em;
+    margin: 0;
+    line-height: 60px;
+    color: var(--secondary);
+}
