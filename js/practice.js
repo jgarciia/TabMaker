@@ -110,7 +110,7 @@ let startSong = () => {
         currentNote = 0
     } else {
         playing = setInterval(() => {
-            notes.forEach((element)=>{
+            notes.forEach((element, index)=>{
                 if (currentNote >= element.length) {
                     clearInterval(playing)
                     $('playButton').src = "./images/play.png"
@@ -120,6 +120,8 @@ let startSong = () => {
                 if (element[currentNote] != "|" && element[currentNote] != "a") {
                     new Audio(`./sounds/${element[currentNote]}.mp3`).play()
                 }
+
+                (currentNote%56 == 0 && index == 5 && currentNote > 0)? $('tablature').scrollTo(0, $('tablature').scrollTop + 140) : ""
                 removeClass('selected')
                 addClass('selected', currentNote)
             }) 

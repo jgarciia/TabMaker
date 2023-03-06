@@ -12,7 +12,7 @@ body {
 .box {
     display: flex;
     width: 80%;
-    margin: 0 auto 15px auto;
+    margin: 0 auto 0 auto;
     justify-content: space-between;
 }
 
@@ -50,7 +50,7 @@ body {
 }
 
 #tablature {
-    height: 800px;
+    height: 835px;
 }
 
 #insertSpeed {

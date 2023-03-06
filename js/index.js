@@ -99,6 +99,7 @@ let update = () => {
                 tab += "</div>"
                 $("tablature").innerHTML += tab
                 addFret()
+                $('tablature').scrollTo(0, $('tablature').scrollHeight);
             }
             $$(`#container${Math.floor(index/56)} > .numbers > .notes`)[iteration].innerHTML += `<li value="${index}">${(item != "a")? item : "&nbsp"}</li>`
         })
